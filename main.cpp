@@ -24,8 +24,8 @@ string ToString(int val) //Convert int to string
     stream << val;
     return stream.str();
 }
-bool checkNumber(string a); //Check if string is a number
-bool alphabeticallyOrder(string a, string b); //alphabet order
+bool checkNumber(string a); //Check if a string contains all numeric characters.
+bool alphabeticallyOrder(string a, string b); //Check if two strings are alphabetically ordered
 void MergeSortA(int low, int high); 
 void MergeA(int low, int mid, int high);
 void SortnWrite(int numberOfchunnk);
@@ -35,9 +35,9 @@ vector<vector<string>> content;
 int main()
 {
     int chunkSize = 107374182/4; //Max size for 1 file csv
-    int TotalByte = 0; //Actually it a length of string
+    int TotalByte = 0; //Actually it is a length of string
     int numberOfchunk = 1;
-    bool unprocessedData = true; //did data had wrote or not
+    bool unprocessedData = true; //Check if data had been written or not
     string fname = "Books_rating.csv"; //file path
     //Get a line of file and push to vector 2D content[row][column]
     //if TotalByte >= chunkSize then write content to file and reset variables
